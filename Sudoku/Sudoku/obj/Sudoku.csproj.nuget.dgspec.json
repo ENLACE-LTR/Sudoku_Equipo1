@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku\\Sudoku\\Sudoku.csproj": {}
+    "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku_Equipo1\\Sudoku\\Sudoku\\Sudoku.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku\\Sudoku\\Sudoku.csproj": {
+    "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku_Equipo1\\Sudoku\\Sudoku\\Sudoku.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku\\Sudoku\\Sudoku.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku_Equipo1\\Sudoku\\Sudoku\\Sudoku.csproj",
         "projectName": "Sudoku",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku\\Sudoku\\Sudoku.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku_Equipo1\\Sudoku\\Sudoku\\Sudoku.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku\\Sudoku\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Equipo1_Sudoku\\Sudoku_Equipo1\\Sudoku\\Sudoku\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
