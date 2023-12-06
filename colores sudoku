@@ -2,11 +2,11 @@ namespace ASR1
 {
     class Program
     {
-        static string[,] sudoku = new string[10, 10];  //arreglo del sudoku
+        static string[,] sudoku = new string[10, 10]; //arreglo del sudoku
         static Dictionary<string, ConsoleColor> colores = new Dictionary<string, ConsoleColor>();
         static Random random = new Random();
         static bool jugar = true;
-        static void Main() //iniciar estado base del juego
+        static void Main()//inicia el juego
         {
             PrimordialState();
             while (jugar)
@@ -14,7 +14,7 @@ namespace ASR1
                 IniciarJuego();
             }
         }
-        static void IniciarJuego()
+        static void IniciarJuego()//da la bienvenidad al juego
         {
             Console.WriteLine("!!!BIENVENIDO AL JUEGO DEL SUDOKU!!!");
             Console.WriteLine("PARA JUGAR TIENES QUE INGRESAR UN NUMERO DE 3 DIGITOS");
@@ -24,7 +24,7 @@ namespace ASR1
             Console.WriteLine("511 COLOCARIA EL NUMERO 5 EN LA POSICION 1,1");
             DesicionJugador();
         }
-        static void DesicionJugador() //seleccionar si deseas jugar o no
+        static void DesicionJugador()//el jugador decide si iniciar el juego o no, y verifica si lo que ingreso es correcto
         {
             Console.WriteLine("QUIERES INICIAR?");
             Console.WriteLine("A) SI");
@@ -47,21 +47,21 @@ namespace ASR1
                     break;
             }
         }
-        static void Jugar()//realizar mov
+        static void Jugar()//lee el movimiento que el jugador introduzca
         {
             Console.WriteLine("Realiza el un movimiento...");
             string input = "";
             input = Console.ReadLine();
             ComprobacionInputJugador(input);
         }
-        static void ComprobacionInputJugador(string input)
+        static void ComprobacionInputJugador(string input) //verifica si los valores introducidos son correctos
         {
             if (input.Length > 3 || input.Length < 3)
             {
                 Console.WriteLine("Numero ingresado erroneo, reintentalo...");
                 Jugar();
             }
-            else // verificar que los valores sean correctos
+            else
             {
                 string pos1 = input[0].ToString();
                 string pos2 = input[1].ToString();
@@ -80,7 +80,7 @@ namespace ASR1
                 VerificarInpunt(pos1, int.Parse(pos2), int.Parse(pos3), true);
             }
         }
-        static bool VerificarInpunt(string numero, int posX, int posY, bool isPlayer)
+        static bool VerificarInpunt(string numero, int posX, int posY, bool isPlayer)// verifica si el movimiento es correcto, en base a lo introducido arriba
         {
             bool error = false;
             for (int i = 1; i < 10; i++)
@@ -102,10 +102,10 @@ namespace ASR1
             if (!error)
 
             {
-                string pos = posX.ToString();
+                string pos = posX.ToString();//coloca los colores en base a los datos introducidos
                 pos += posY.ToString();
                 ConsoleColor colorPos = colores[pos];
-                switch (colorPos) //dar color en base a la posicion jugada
+                switch (colorPos)
                 {
                     case ConsoleColor.Green:
                         for (int i = 10; i < 31; i += 10)
@@ -293,7 +293,7 @@ namespace ASR1
             }
             return error;
         }
-        static void ImprimirSudoku()//imprimir avance del juego
+        static void ImprimirSudoku()
         {
             Console.Clear();
             for (int i = 0; i < 10; i++)
@@ -309,7 +309,7 @@ namespace ASR1
             }
             Console.WriteLine("");
         }
-        static void PrimordialState() //estado inicial del juego
+        static void PrimordialState()//inicio base del juego
         {
             sudoku[0, 0] = " ";
             sudoku[0, 1] = "1";
